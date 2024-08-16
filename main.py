@@ -229,4 +229,7 @@ async def create_upload_file(file: UploadFile):
         # 임시 파일 삭제
         os.unlink(temp_file.name)
 
-    return {"filename": file.filename}
+    return {
+            "filename": file.filename,
+            "obj": label_set
+           }
